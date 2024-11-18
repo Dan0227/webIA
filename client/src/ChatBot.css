@@ -1,0 +1,85 @@
+body {
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana del navegador */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background:  /* #0056b3; */ linear-gradient(to bottom, #2c547c, #ffffff);  /* Degradado de azul a blanco */
+    /* background-image: url('/public/Fondo/Fondo16-9.png'); Sin la barra inicial */
+    background-size: cover; /* Asegura que la imagen cubra toda el área del body */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido dentro se apile verticalmente */
+}
+
+#root {
+    flex: 1; /* Hace que el contenedor principal ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Mismo margen arriba y abajo */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff; /* Mantener el fondo blanco para las tarjetas */
+}
+
+.chat-window {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.chat-message.right {
+    background-color: #d1e7ff;
+    align-self: flex-end;
+}
+
+.chat-message.left {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-input .input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-input .button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input .button:hover {
+    background-color: #0056b3;
+}
